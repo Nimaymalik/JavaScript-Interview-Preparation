@@ -5,7 +5,7 @@
 let name = "nimay";
 let age = 18;
 let isLoggedIn = false;
-let state = null;
+
 
 //undefined means that the vlue is not defined yet
 //Example
@@ -15,4 +15,7 @@ let state = null;
 // null=>object
 //undefined=>undefined
 
-console.table([typeof name, typeof age, typeof isLoggedIn, typeof state]);
+console.log(typeof null);
+console.log(typeof undefined);
+
+console.table([typeof name, typeof age, typeof isLoggedIn]);

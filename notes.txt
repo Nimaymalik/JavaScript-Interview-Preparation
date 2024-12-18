@@ -1,1 +1,2 @@
 ECMA script=Used to design the standered of the code in javascript
+NaN=Not a nuber
