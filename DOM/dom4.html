@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+    // -------------------- ----------------- -----------------------
+    function addLanguage(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`; //adding element in HTML
+
+      document.querySelector(".language").appendChild(li); //adding the data in LI
+    }
+    addLanguage("python");
+    addLanguage("TypeScript");
+
+    // -------------------- Add the content -----------------------
+    //more optimised way to add the element without traversing the whole tree
+
+    function addOptLanguage(langname) {
+      const li = document.createElement("li");
+
+      li.appendChild(document.createTextNode(langname));
+      document.querySelector(".language").appendChild(li);
+    }
+    addOptLanguage("java");
+
+    // -------------------- EDIT THE CONTENT-----------------------
+
+    const sec = document.querySelector("li:nth-child(2)");
+    sec.innerHTML = "mojo";
+
+    // -------------------- Remove the content -----------------------
+    const rem = document.querySelector("li:nth-child(2)");
+    rem.remove();
+  </script>
+</html>
